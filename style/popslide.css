@@ -1,0 +1,110 @@
+﻿@charset "utf-8";
+.mask{
+	margin:0
+	;padding:0;
+	border:none;
+	width:100%;
+	height:100%;
+	background:#333;
+	opacity:0.6;
+	filter:alpha(opacity=60);
+	z-index:9999;
+	position:fixed;
+	top:0;
+	left:0;
+	display:none;
+}
+#LoginBox{
+	position:absolute;
+	left:460px;
+	top:150px;
+	background:white;
+	width:426px;
+	height:362px;
+	border:3px solid #D4D3D3;
+	border-radius:7px;
+	z-index:10000;
+	display:none;
+}
+.row1{
+	background:#f7f7f7;
+	padding:0px 20px;
+	margin-bottom: 30px;
+	line-height:50px;
+	height:50px;
+	font-weight:bold;
+	
+	font-size:20px;
+	color: #F3A331;
+}
+.row{
+	height:60px;
+	line-height:60px;
+	padding:0px 30px;
+	font:15px/1 '宋体';
+	font-size:x-large;
+	color:#B33E3E;
+}
+.close_btn{
+	font-family:arial;
+	font-size:30px;
+	font-weight:700;
+	color:#999;
+	text-decoration:none;
+	float:right;
+	padding-right:4px;
+}
+.inputBox{
+	border:1px solid #c3c3c3;
+	padding:1px 3px 6px 3px;
+	border-radius:5px;
+	margin-left:5px;
+}
+#txtName{
+	height:27px;
+	width:210px;
+	border:none;
+	outline: none;
+}
+#txtPwd{
+	height:27px;
+	width:210px;
+	border:none;
+	outline: none;
+}
+#loginbtn{
+	color:White;
+	background:#F3A331;
+	text-decoration:none;
+	padding:5px 35px;
+	text-align: center;
+	margin-left:125px;
+	border-radius:5px;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+}
+.warning{
+	float:right;
+	color:Red;
+	text-decoration:none;
+	font-size:20px;
+	font-weight:bold;
+	margin-right:20px;
+	display:none;}
+/*图片轮播的css*/
+/*复制自imageflow.css*/
+@charset "utf-8";
+/*#LoopDiv{
+	position: absolute;
+	left: 50%;
+	margin-left: -640px;
+	top: 300px;
+	width: 100%;
+	display: block;
+	clear: both;
+}火狐里移位了 自己改*/
+.imageflow{overflow:hidden; position:relative; text-align:left; visibility:hidden; width:100%}
+.imageflow img{border:none; position:absolute; top:0px; visibility:hidden; -ms-interpolation-mode:bicubic}
+.imageflow .loading{border:1px solid #ccc; height:15px; left:50%; margin-left:-106px; padding:5px; position:relative; visibility:visible; width:200px}
+.imageflow .loading_bar{background:#ccc; height:15px; visibility:visible; width:1%}
+.imageflow .images{overflow:hidden; white-space:nowrap}

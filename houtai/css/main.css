@@ -1,0 +1,356 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+body {
+    background-color: #fffff0;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    clear: both;
+}
+/*slidebar侧边栏*/
+.slidebar {
+    width: 15%;
+    min-height: 680px;
+    float: left;
+    border-right: 1px solid rgb(235,235,235);
+    background-color: #E9967A;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+    .slidebar .logo {
+        height: 200px;
+        border-bottom: 1px solid #ABAAAA;
+        padding-bottom: 100px;
+    }
+
+    .slidebar li {
+        position: relative;
+    }
+        /*设置的是用字做的图标的颜色*/
+        .slidebar li:before {
+            content: "";
+            font-family: 'icomoon';
+            font-weight: normal;
+            position: absolute;
+            display: block;
+            line-height: 40px;
+            color: #9400D3;
+            right: 20px;
+            -webkit-font-smoothing: antialiased;
+        }
+        /*插入icon图标*/
+        .slidebar li:nth-child(1):before {
+            content: "\65";
+        }
+
+        .slidebar li:nth-child(2):before {
+            content: "\64";
+        }
+
+        .slidebar li:nth-child(3):before {
+            content: "\69";
+        }
+
+    .slidebar ul a {
+        color: #2F4F4F;
+        font: 16px/40px helvetica,verdana,sans-serif;
+        box-sizing: border-box;
+        border-bottom: 1px solid #CFCCCC;
+        display: block;
+        box-shadow: inset 0 1px 0 rgb(255,255,255);
+        text-indent: 3em;
+        text-transform: capitalize;
+    }
+
+    .slidebar li:hover a {
+        background-color: #FFF8DC;
+        box-shadow: 1px 0 0 rgb(255,255,255),inset 5px 0 0 -1px rgb(234,83,63);
+    }
+/*main*/
+.main {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    float: left;
+    width: 85%;
+    min-height: 680px;
+    background-color: #fffff0;
+    position: relative;
+    font-family: helvetica,verdana,sans-serif;
+}
+
+    .main .topbar {
+        border: 1px solid #EBEBEB;
+    }
+/*topbar顶部按钮栏*/
+.topbar li {
+    display: inline-block;
+    list-style: none;
+    width: 120px;
+}
+
+.topbar a {
+    font-family: 'icomoon';
+    display: block;
+    line-height: 50px;
+    width: 120px;
+    text-align: center;
+    color: rgb(102,102,102);
+}
+
+    .topbar a:hover {
+        background-color: #EFEAEA;
+    }
+
+.topbar li:last-child {
+    padding-left: 600px;
+    text-align: right;
+}
+/*mainContent*/
+.mainContent h4 {
+    line-height: 1;
+    font-size: 18px;
+    margin: 1.3em 0 1em;
+    margin-left: 17px;
+}
+
+.mainContent h2 {
+    margin: 1em 30px;
+    color: #5F9EA0;
+    font-size: 20px;
+}
+
+    .mainContent h2:before {
+        font-family: 'icomoon';
+        content: attr(data-icon);
+        line-height: 1;
+        margin-right: 10px;
+        -webkit-font-smoothing: antialiased;
+    }
+
+.mainContent div:nth-child(1) h2:before {
+    content: "\65";
+}
+
+.mainContent div:nth-child(2) h2:before {
+    content: "\64";
+}
+
+.mainContent div:nth-child(3) h2:before {
+    content: "\69";
+}
+
+/*logo*/
+.logo img {
+    height: 120px;
+    width: 120px;
+    border: 1px solid rgb(200,200,200);
+    border-radius: 50%;
+    margin-left: 25px;
+    margin-top: 60px;
+    background-color: #E7DFDF;
+}
+
+    .logo img:hover {
+        background-color: #fffff0;
+    }
+
+.logo h4 {
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 70px;
+    color: #8B4513;
+}
+
+input[type="checkbox"] {
+    height: 15px;
+    width: 15px;
+}
+
+/*图书管理区的*/
+.book-list img {
+    height: 150px;
+    width: 95px;
+    padding: 15px;
+    display: block;
+}
+
+.book-list {
+    height: 490px;
+    width: 776px;
+    margin: 0 auto;
+    clear: both;
+}
+
+    .book-list ul li {
+        height: 220px;
+        width: 125px;
+        float: left;
+        text-align: center;
+        /* border:1px solid #000;*/
+        padding: 0 10px;
+    }
+
+    .book-list span {
+        text-align: center;
+    }
+/*新闻管理区的*/
+#news input[type="checkbox"] {
+    height: px;
+    width: 20px;
+    margin-right: 10px;
+}
+
+#news .news-list {
+    padding: 20px 0 0 20px;
+}
+
+    #news .news-list li {
+        padding: 8px 0 4px 0;
+        font: 16px/1 '微软雅黑';
+        border-bottom: 1px dotted #B3ADAD;
+    }
+
+        #news .news-list li a:hover {
+            text-decoration: underline;
+            color: #B13434;
+        }
+
+        #news .news-list li .date {
+            color: #918D8D;
+            float: right;
+        }
+/*用户信息*/
+#infor .person {
+    height: 500px;
+    width: 800px;
+    margin: 20px auto;
+    background-color: #EAEAEA;
+    border-radius: 20px;
+}
+
+    #infor .person .person-pic {
+        height: 400px;
+        float: left;
+    }
+
+    #infor .person img {
+        padding: 30px;
+        height: 150px;
+        width: 150px;
+        display: inline-block;
+        /*float: left;*/
+    }
+
+    #infor .person h2 {
+        font-size: 25px;
+        color: #8B4E91;
+        padding: 20px 0 20px 0;
+        margin: 0;
+    }
+
+    #infor .person li {
+        margin-bottom: 10px;
+        height: 40px line-height: 40px;
+        padding: 5px 0;
+    }
+
+    #infor .person label {
+        display: inline-block;
+        margin-right: 10px;
+        width: 80px;
+        text-align: center;
+        color: #546176;
+    }
+
+    #infor .person input,#infor .person select {
+        font-size: 16px;
+        height: 30px;
+        width: 300px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*所有页面的页脚*/
+body {
+    position: relative;
+}
+
+.page-footer {
+    position: absolute;
+    width: 85%;
+    float: right;
+    height: 20px;
+    top: 640px;
+    text-align: center;
+}
+
+    .page-footer a {
+        color: #4F56C6;
+        padding: 0 10px;
+    }
+
+        .page-footer a:hover {
+            text-decoration: underline;
+        }
+
+    .page-footer li {
+        /* border:1px solid #838080;*/
+        height: 20px;
+        line-height: 20px;
+        width: 20px;
+        display: inline-block;
+        text-align: center;
+    }
+
+.fl {
+    width: 70px !important;
+}
+
+    .fl a {
+        color: #2D6814 !important;
+        text-decoration: none;
+    }
+
+        .fl a:hover {
+            text-decoration: underline;
+        }
+
+.book-list a:hover {
+    color: #A28A7B;
+    text-decoration: underline;
+}

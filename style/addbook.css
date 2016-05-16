@@ -1,0 +1,110 @@
+﻿.container {
+    width: 1000px;
+    margin: 40px auto;
+    border: 3px solid #f55e5e;
+    box-shadow: -8px -8px 5px #f1e1a3, -15px -16px 8px #fffff0, -25px -24px 10px #f7cece, 8px 8px 5px #f1e1a3, 15px 16px 8px #fffff0, 25px 24px 10px #f7cece;
+    border-radius: 10px;
+    min-height: 600px;
+    position: relative;
+}
+
+.img {
+    float: left;
+    
+    width: 280px;
+    height: 300px;
+    text-align: center;
+}
+
+.detail {
+    float: left;
+    
+    width: 300px;
+    height: 300px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.dt1 {
+    margin: 50px auto;
+    width: 650px;
+    height: 300px;
+}
+
+.dt2{
+    margin:0 auto;
+    text-align:center;
+    margin-bottom: 30px;
+}
+
+.dt2 textarea{
+    width:600px;
+    height:350px;
+    
+}
+
+.dt2 label{
+    display: block;
+}
+
+.btnliulan {
+    height: 30px;
+    border: 1px solid #f55e5e;
+    border-radius: 5px;
+    background: #f55e5e;
+    color: #fffff0;
+    font-size: 16px;
+}
+.item {
+    padding-top: 9px;
+}
+
+.item input,.item select{
+     width: 150px;
+    height: 25px;
+    border-radius: 5px;
+    outline: none;
+   border: 1px solid #f55e5e;
+   padding-left: 5px;
+   margin-left: 10px;
+
+}
+.item label {
+        width: 100px;
+    display: inline-block;
+    text-align: right;
+}
+
+.submit {
+    margin: 30px auto;
+    text-align: center;
+}
+.btnSuccess{
+    width:120px;
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+     display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.btn {
+   
+}

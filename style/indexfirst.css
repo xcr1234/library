@@ -1,0 +1,204 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	background-color: #fffff0;
+}
+a{
+	color: #000;
+	text-decoration: none !important;
+}
+
+a:hover{
+	color: #A78C44 !important;
+    text-decoration:underline !important;
+}
+
+li{
+	list-style: none;
+}
+/*top开始*/
+.top{
+background-color: #F5F090;
+}
+.top ul{
+	clear: both;
+	height: 30px;
+	line-height: 30px;
+}
+.top li{
+	float: right;
+	width: 80px;
+	margin-right: 20px;
+}
+.top li a:link,.top li a:visited{
+	color:#000 ;
+}
+.top li a:hover,.top li a:active{
+	color:#B2A9A9;
+}
+ .ulink{
+	/*padding-right: 10px;*/
+	display: none;
+
+}
+.ulink li{
+	border: 2px dotted #D27038;
+	border-top: none;
+	float: none;
+	background-color: #F5F090;
+}
+/*top结束*/
+/*wrap开始*/
+.wrap,.wrap2{
+	width: 1000px;
+	margin:0 auto;
+}
+.logo-pic{
+	margin:0 20px;	
+	float: left;
+}
+.search {
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	width: 430px;
+	margin:60px 20px 0 40px;
+    /*background: url(images/magnifier_24.png)no-repeat right center;*/
+	/*设置右填充，不然输入文本的时候文字会覆盖图片*/
+	/*border: 1px solid #ccc;*/
+	float: left;
+}
+.search input{
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	width: 392px;
+	height: 100%;
+	border: none;
+	background-color: transparent;
+	outline: none;
+}
+.search .find{ 
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	float: right;
+	background: url(../images/magnifier.png)no-repeat center;
+    position: relative;
+    left: -50px;
+    top: 0px;
+}
+.search .find:hover{
+	background-color: #F15E5E;
+}
+.login{
+	float: left;
+	margin: 60px 0 20px 60px;
+}
+.login a{
+	color:#982E20;
+}
+.login a:hover{
+	color: #82715D;
+	text-decoration: underline;
+}
+/*主体部分开始*/
+.head{
+	font:20px/1 '宋体';
+	font-weight: bold;
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 2px dotted #656A62;
+	border-top: 2px dotted #656A62;
+	margin-bottom: 5px;
+	color: #000;
+}
+.head .more{
+	font: 14px/1 '宋体';
+	color: #7C3F2B;
+	padding-left:800px;
+}
+.head .more:hover{
+	text-decoration: underline;
+	color: #3F35AC;
+}
+/*标题的图标*/
+.head i{
+	background:url(../images/head.png) no-repeat;
+	float: left;
+	width: 50px;
+	height: 50px;
+/*	background-color: #233061;
+	border-radius: 5px;*/
+}
+.head a:hover{
+	text-decoration: underline;
+}
+/*设置这区图片的大小*/
+.wrap2 .book-display img,.book-reconmmend img{
+	height: 200px;
+	width: 125px;
+	padding:10px;
+	display: block;
+}
+.wrap2 .book-display img:hover,.book-reconmmend img:hover{
+	border:1px solid #75FBEF;
+}
+/*图书展示*/
+
+/*.head-book a{
+  color: #24804B;
+}*/
+.head-book i{
+	background-position:-2px 0px; 
+}
+.book-display,.book-reconmmend{
+	height:490px;
+	width: 776px;
+	margin:0 auto;
+}
+.book-display ul li,.book-reconmmend ul li{
+	height: 240px;
+	width:145px;
+    float: left;
+    text-align: center;
+}
+/*新闻中心*/
+.head-news a{
+/*color:#B6932C;*/
+clear: left;
+}
+.head-news i{
+	background-position:-150px -300px; 
+}
+
+/*新书速递*/
+.head-new a{
+/*color:#563E5E;*/
+clear: left;
+}
+.head-new i{
+	background-position:-150px -74px; 
+}
+#lgnMain_LoginButton{
+        color: White;
+    background: #F3A331;
+    text-decoration: none;
+    padding: 12px 35px;
+    font-size:20px;
+    text-align: center;
+    margin-left: 125px;
+    border-radius: 5px;
+    opacity: 0.8;
+}
+
+.inputBox input{
+        height: 27px;
+    width: 210px;
+    border: none;
+    outline: none;
+}
+
+

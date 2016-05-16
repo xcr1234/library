@@ -1,0 +1,18 @@
+﻿.img-hover .hidden {
+	display:none;
+    border:1px solid rgb(117, 92, 92);
+    height:158px;
+     background:#FFDAB9;
+         border-radius:7px;
+}
+.img-hover .hidden:hover{
+    position:relative;
+}
+.img-hover:hover .hidden{
+    display:block;
+    
+    top:-200px;
+    left:110px;
+    position:relative;
+
+}

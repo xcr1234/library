@@ -1,0 +1,97 @@
+﻿
+/*-------------------------布局--------------------*/
+.main {
+    height:880px;
+}
+
+
+
+
+.page-footer{
+        float: left;
+    text-align: center;
+    margin: 30px auto;
+    width: 800px;
+}
+.page-footer a {
+    color: #4F56C6;
+    padding: 0 10px;
+}
+
+.content {
+    margin: 10px 0 30px 150px;
+    width: 1000px;
+    
+}
+
+sd .dback {
+    font-size: larger;
+    text-decoration: none;
+    color: #A0522D;
+}
+
+.dtittle {
+    width: 1000px;
+    height: 50px;
+}
+
+#dbname {
+    margin: 50px 0 0 60px;
+    font-size: 27px;
+    font-family: 微软雅黑;
+}
+
+.hr-img {
+    width: 920px;
+    margin: 10px 20px 0 30px;
+    border: 1px dashed #A0522D;
+}
+
+.detail-img-info {
+    width: 1000px;
+    height: 200px;
+}
+
+.dimg {
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin: 10px 0 0 50px;
+}
+
+.hrdetail {
+    width: 920px;
+    margin: 0 20px 0 30px;
+    border: 1px dashed #A0522D;
+}
+
+.detailsm {
+    margin: 0 auto;
+    background-color: #FFEFD5;
+    height: 500px;
+    width: 1000px;
+    float: left;
+    border-radius: 7px;
+}
+
+.pdetail {
+    width: 900px;
+    height: 450px;
+    margin: 0 0 0 50px;
+}
+
+
+
+body {
+    background-color: #FFFFF0;
+}
+
+li.bookli {
+    width: 150px;
+    float: left;
+    margin: 15px 30px;
+    height: 200px;
+}
+.hidden{
+    display:none;
+}

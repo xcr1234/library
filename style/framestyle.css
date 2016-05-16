@@ -1,0 +1,160 @@
+*{
+margin:0;
+padding:0;
+ }
+ .logo{
+ 	width: 1000px;
+ 	margin:0 auto;
+ }
+.logo-pic{
+	margin:0 20px 20px 80px;	
+	float: left;
+}
+.search {
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	width: 430px;
+	margin:60px 20px 0 60px;
+    /*background: url(images/magnifier_24.png)no-repeat right center;*/
+	/*设置右填充，不然输入文本的时候文字会覆盖图片*/
+	border: 1px solid #ccc;
+	float: left;
+}
+.search input{
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	width: 392px;
+	height: 100%;
+	border: none;
+	background-color: transparent;
+	outline: none;
+}
+.search .find{ 
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	float: right;
+	background: url(../images/magnifier_24.png)no-repeat  center;
+}
+.search .find:hover{
+	background-color: #F15E5E;
+}
+
+div.kwicks_container {
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+	margin-top: 40px;
+	margin-bottom: 0px;
+	position:absolute;
+	width: 100%;
+	background-color:#E9967A;
+	padding:20px 300px 20px 350px;
+}
+/*-------------------------KWICKS--------------------*/
+.kwicks {
+	list-style: none;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width:600px;
+	height:50px;
+	z-index:2;
+}
+.kwicks li {
+	display: block;
+	float: left;
+	overflow: hidden;
+	padding: 0;
+	cursor: pointer;
+	width: 100px;
+	height: 35px;
+	z-index:2;
+	cursor:pointer;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #7E7E7B;
+}
+.kwicks li a {
+	background-image:url(../images/sprites_menu.png);
+	background-repeat:no-repeat;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Arial;
+	font-size: 14px;
+	letter-spacing: -0.07em;
+	color: #191970;
+	height: 40px;
+	outline:none;
+	display:block;
+	z-index:100;
+	cursor:pointer;
+	text-transform: uppercase;
+	margin-top: -3px;
+	margin-left: 5px;
+	text-decoration: none;
+}
+.kwicks li h3 {
+	position: absolute;
+	width: 120px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Arial;
+	font-size: 10px;
+	color:#8B0000;
+	letter-spacing: -0.02em;
+	outline:none;
+	z-index:0;
+	cursor:pointer;
+	text-transform: uppercase;
+	font-weight: normal;
+	margin-left: 5px;
+	text-decoration: none;
+	left: 0px;
+	top: 15px;
+	right: 0px;
+	bottom: 0px;
+}
+#kwick_1, #kwick_2, #kwick_3, #kwick_4, #kwick_5{
+	margin: 0pt;
+	overflow: hidden;
+	position: absolute;
+	display: block;
+	width: 120px;
+}
+#kwick_1 {
+	left: 0px;
+	border: none;
+}
+#kwick_2 {
+	left: 120px;
+}
+#kwick_3 {
+	left: 240px;
+}
+#kwick_4 {
+	left: 360px;
+}
+#kwick_5 {
+	right: 0px;
+}
+
+#kwick_1 a {
+	background-position:0px 0px;
+}
+.kwicks a:hover, .kwicks #active {
+	color: #3399FF;
+}
+.kwicks li a:hover h3, .kwicks li #active h3 {
+	color: #999999;
+}
+#kwick_2 a {
+	background-position:0px -50px;
+}
+#kwick_3 a {
+	background-position:0px -192px;
+}
+#kwick_4 a {
+	background-position:0px -100px;
+}
+#kwick_5 a {
+	background-position:0px -300px;
+}

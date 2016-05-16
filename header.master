@@ -1,0 +1,331 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="header.master.cs" Inherits="header" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+    <link rel="stylesheet" href="style/indexfirst.css">
+    <link rel="stylesheet" href="style/3d-nav.css">
+    <link rel="stylesheet" href="style/popslide.css">
+    <link rel="stylesheet" href="style/newstab-bottom.css">
+    <script src='javascript/indexfirst.js'></script>
+    <!-- 收藏和设为首页的js -->
+    <script src="javascript/imageflow.js"></script>
+    <!-- 图像轮播的js -->
+    <script src='javascript/jquery-2.1.4.js'></script>
+    <script src="javascript/jquery.easing.1.3.js"></script>
+    <script src='javascript/FeatureList.js'></script>
+    <script src="javascript/jquery.kwicks-1.5.1.js"></script>
+    <!-- 这个是新闻的js -->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.featureList(
+				$("#tabs li a"),
+				$("#output li"), {
+				    start_item: 0
+				}
+			);
+        });
+        $(function () {
+            $('.link').hover(function () {
+                $('.ulink').show();
+            }, function () {
+                $('.ulink').hide();
+            })
+        });
+        $(function () {
+            $('.link').hover(function () {
+                $('.ulink').show();
+            }, function () {
+                $('.ulink').hide();
+            })
+        });
+
+        $(function ($) {
+            //弹出登录
+            $("#example").hover(function () {
+                $(this).stop().animate({
+                    opacity: '1'
+                }, 600);
+            }, function () {
+                $(this).stop().animate({
+                    opacity: '0.6'
+                }, 1000);
+            }).on('click', function () {
+                $("body").append("<div id='mask'></div>");
+                $("#mask").addClass("mask").fadeIn("slow");
+                $("#LoginBox").fadeIn("slow");
+            });
+
+            //
+            //按钮的透明度
+            $("#loginbtn").hover(function () {
+                $(this).stop().animate({
+                    opacity: '1'
+                }, 600);
+            }, function () {
+                $(this).stop().animate({
+                    opacity: '0.8'
+                }, 1000);
+            });
+            //文本框不允许为空---按钮触发
+            $("#loginbtn").on('click', function () {
+                var txtName = $("#txtName").val();
+                var txtPwd = $("#txtPwd").val();
+                if (txtName == "" || txtName == undefined || txtName == null) {
+                    if (txtPwd == "" || txtPwd == undefined || txtPwd == null) {
+                        $(".warning").css({ display: 'block' });
+                    }
+                    else {
+                        $("#warn").css({ display: 'block' });
+                        $("#warn2").css({ display: 'none' });
+                    }
+                }
+                else {
+                    if (txtPwd == "" || txtPwd == undefined || txtPwd == null) {
+                        $("#warn").css({ display: 'none' });
+                        $(".warn2").css({ display: 'block' });
+                    }
+                    else {
+                        $(".warning").css({ display: 'none' });
+                    }
+                }
+            });
+            //文本框不允许为空---单个文本触发
+            $("#txtName").on('blur', function () {
+                var txtName = $("#txtName").val();
+                if (txtName == "" || txtName == undefined || txtName == null) {
+                    $("#warn").css({ display: 'block' });
+                }
+                else {
+                    $("#warn").css({ display: 'none' });
+                }
+            });
+            $("#txtName").on('focus', function () {
+                $("#warn").css({ display: 'none' });
+            });
+            //
+            $("#txtPwd").on('blur', function () {
+                var txtName = $("#txtPwd").val();
+                if (txtName == "" || txtName == undefined || txtName == null) {
+                    $("#warn2").css({ display: 'block' });
+                }
+                else {
+                    $("#warn2").css({ display: 'none' });
+                }
+            });
+            $("#txtPwd").on('focus', function () {
+                $("#warn2").css({ display: 'none' });
+            });
+            //关闭
+            $(".close_btn").hover(function () { $(this).css({ color: 'black' }) }, function () { $(this).css({ color: '#999' }) }).on('click', function () {
+                $("#LoginBox").fadeOut("fast");
+                $("#mask").css({ display: 'none' });
+            });
+        });
+        function login() {
+            $("body").append("<div id='mask'></div>");
+            $("#mask").addClass("mask").fadeIn("slow");
+            $("#LoginBox").fadeIn("slow");
+        }
+        function close() {
+            $("#LoginBox").fadeOut("fast");
+            $("#mask").css({ display: 'none' });
+        }
+    </script>
+    <style type="text/css">
+        .dropdownlist {
+        width:76px;
+        border:2px solid #808080;
+        border-radius:5px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="LoginBox">
+
+            <asp:Login ID="lgnMain" runat="server" RememberMeSet="False" OnAuthenticate="Login1_Authenticate">
+                <LayoutTemplate>
+                    <div class="row1">
+                        登录布客网<a href="javascript:close();" title="关闭窗口" class="close_btn" id="closeBtn">×</a>
+                    </div>
+                    <div class="row">
+                        管理员: <span class="inputBox">
+                            <asp:TextBox runat="server" ID="UserName"></asp:TextBox></span>
+                        <asp:RequiredFieldValidator runat="server" ControlToValidate="UserName" ErrorMessage="必须填写“用户名”。" ValidationGroup="Login1" ToolTip="必须填写“用户名”。" ID="UserNameRequired">*</asp:RequiredFieldValidator>
+                    </div>
+                    <div class="row">
+                        密　码: <span class="inputBox">
+                            <asp:TextBox runat="server" TextMode="Password" ID="Password"></asp:TextBox></span>
+                        <asp:RequiredFieldValidator runat="server" ControlToValidate="Password" ErrorMessage="必须填写“密码”。" ValidationGroup="Login1" ToolTip="必须填写“密码”。" ID="PasswordRequired">* </asp:RequiredFieldValidator>
+                    </div>
+                    <div class="row">
+                        验证码: <span class="inputBox">
+                            <asp:TextBox ID="txtCode" runat="server" Style="width: 140px;"></asp:TextBox></span>
+                        <a href="javascript:rand();" title="看不清，换一张？">
+                            <img src="Code.ashx" id="imgCode" style="vertical-align: middle;" /></a>
+                        <asp:RequiredFieldValidator runat="server" ControlToValidate="txtCode" ErrorMessage="必须填写“验证码”。" ValidationGroup="Login1" ToolTip="必须填写“验证码”。" ID="rfvCode">* </asp:RequiredFieldValidator>
+
+
+
+                    </div>
+                    <script>
+                        function rand() {
+                            imgCode.src = "Code.ashx?rand=" + Math.random();
+                        }
+                    </script>
+                    <div class="row">
+                        <asp:Button runat="server" CommandName="Login" Text="登录" ValidationGroup="Login1" ID="LoginButton" CssClass="loginbtn"></asp:Button>
+                    </div>
+                </LayoutTemplate>
+            </asp:Login>
+
+        </div>
+        <div class="top">
+            <ul>
+                <li class="link" style='list-style: url(images/link2.png)'><a href="javascript:;">友情链接</a>
+                    <ul class="ulink">
+                        <li><a href="http://fashion.dangdang.com" target="new">当当网</a></li>
+                        <li><a href="http://www.amazon.cn" target="new">亚马逊网</a></li>
+                        <li><a href="https://www.taobao.com/" target="new">淘宝网</a></li>
+                    </ul>
+                </li>
+                <li style='list-style: url(images/mail.png)'><a href="#">联系我们</a></li>
+                <li style='list-style: url(images/star.png)'><a href="#" onclick="AddFavorite(window.location, document.title)">加入收藏</a></li>
+                <li style='list-style: url(images/paper_plane_24.png)'><a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a></li>
+            </ul>
+            <!-- 友情链接的二级菜单的效果 -->
+            <script type='text/javascript'>
+                $(function () {
+                    $('.link').hover(function () {
+                        $('.ulink').show();
+                    }, function () {
+                        $('.ulink').hide();
+                    })
+                });
+            </script>
+        </div>
+        <!-- 头部结束 -->
+        <div class="wrap">
+            <div class="logo">
+                <div class="logo-pic">
+                    <img src="images/logo.png" alt=""></div>
+                <div class="search" runat="server">
+                    <asp:DropDownList ID="ddlType" runat="server" Width="72px" Height="30px" Cssclass="dropdownlist" >
+                        <asp:ListItem >图书</asp:ListItem>
+                        <asp:ListItem>新闻</asp:ListItem>
+                    </asp:DropDownList>
+
+                    <asp:TextBox ID="txtSearch" runat="server" placeholder='请输入查询的内容' Style="width: 302px; border: 1px solid #ccc;" OnTextChanged="txtSearch_TextChanged" AutoPostBack="true"></asp:TextBox>
+                    <asp:LinkButton ID="lkbQuery" runat="server" CssClass="find" OnClick="lkbQuery_Click">&nbsp;</asp:LinkButton>
+
+                </div>
+
+                <asp:LoginView ID="lgvLogin1" runat="server">
+                    <AnonymousTemplate>
+                        <div class="login">
+                            <img src="images/man_24.png" alt="" />
+                            <a href="javascript:login();" id="example">登陆</a>
+                        </div>
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        <div class="login" style="margin-left: 5px;">
+                            欢迎您，<asp:LoginName ID="LoginName1" runat="server" />
+                            <asp:HyperLink ID="hlHoutai" runat="server" NavigateUrl="~/houtai" Target="_blank">后台管理</asp:HyperLink>
+                            <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                        </div>
+                    </LoggedInTemplate>
+                </asp:LoginView>
+
+
+            </div>
+            <div id="nav">
+                <ul class="nav-menu clearfix unstyled">
+
+                    <li><a href="default.aspx" class="three-d ">返回首页
+					<span class="three-d-box"><span class="front">返回首页</span><span class="back">图书首页</span></span>
+                    </a></li>
+                    <li><a href="newsindex.aspx" class="three-d" target="_blank">新闻中心
+					<span class="three-d-box"><span class="front">新闻中心</span><span class="back">新闻中心</span></span>
+                    </a></li>
+                    <li><a href="comment.aspx" class="three-d">犀利书评
+					<span class="three-d-box"><span class="front">犀利书评</span><span class="back">犀利书评</span></span>
+                    </a></li>
+                    <li>
+                        <asp:LoginView ID="lgvLogin2" runat="server">
+                            <AnonymousTemplate>
+                                <a href="javascript:login();" class="three-d">图书管理
+					<span class="three-d-box"><span class="front">图书管理</span><span class="back">图书管理</span></span>
+                            </AnonymousTemplate>
+                            <LoggedInTemplate>
+                                <a href="houtai" class="three-d">图书管理
+					<span class="three-d-box"><span class="front">图书管理</span><span class="back">图书管理</span></span>
+                            </LoggedInTemplate>
+                        </asp:LoginView>
+
+                        </a></li>
+                    <li><a href="list.aspx" class="three-d">读者查询
+					<span class="three-d-box"><span class="front">读者查询</span><span class="back">读者查询</span></span>
+                    </a></li>
+                </ul>
+            </div>
+            <!-- 导航结束 -->
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="cpHMain" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <!-- 底部区域 上面的只要自己填 就可以撑开了 -->
+        <script type="text/javascript">
+            $().ready(function () {
+                $('.kwicks').kwicks({
+                    max: 200,
+                    duration: 800,
+                    easing: 'easeOutQuint'
+                });
+            });
+        </script>
+
+        <div class="kwicks_container footer">
+            <ul class="kwicks">
+                <li id="kwick_1">
+                    <a href="default.aspx">Home
+						<h3>首页</h3>
+                    </a>
+                </li>
+                <li id="kwick_2">
+                    <a href="http://www.w3cschool.com.cn">CSS & XHTML
+						<h3>样式资源</h3>
+                    </a>
+                </li>
+                <li id="kwick_3">
+                    <a href="http://www.asp.net">ASP.net
+						<h3>建站相关</h3>
+                    </a>
+                </li>
+                <li id="kwick_4">
+                    <a href="#">Others
+						<h3>网站声明</h3>
+                    </a>
+                </li>
+                <li id="kwick_5">
+                    <a href="#">Themes
+						<h3>网站成员</h3>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </form>
+</body>
+</html>

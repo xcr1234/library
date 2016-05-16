@@ -1,0 +1,207 @@
+/* 代码整理：懒人之家 */
+
+#content {
+	width: 750px;
+	margin: 50px auto;
+	padding: 20px;
+	background: #FFF;
+	border: 1px solid #B9B9B9;
+}
+#content h3 {
+	margin: 0;
+	padding: 7px 0 0 0;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+div#feature_list {
+	width: 750px;
+	height: 240px;
+	overflow: hidden;
+	position: relative;
+}
+div#feature_list ul {
+	position: absolute;
+	top: 0;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+ul#tabs {
+	left: 0;
+	z-index: 2;
+	width: 320px;
+}
+ul#tabs li {
+	font-size: 12px;
+	font-family: Arial;
+}
+ul#tabs li img {
+	padding: 5px;
+	border: none;
+	float: left;
+	margin: 10px 10px 0 0;
+}
+ul#tabs li a {
+	color: #222;
+	text-decoration: none;
+	display: block;
+	padding: 10px;
+	height: 60px;
+	outline: none;
+}
+ul#tabs li a:hover {
+	text-decoration: underline;
+}
+ul#tabs li a.current {
+	background:  url('../images/feature-tab-current.png');
+	color: #FFF;
+}
+ul#tabs li a.current:hover {
+	text-decoration: none;
+	cursor: default;
+}
+ul#output {
+	right: 0;
+	width: 463px;
+	height: 240px;
+	position: relative;
+}
+ul#output li {
+	position: absolute;
+	width: 463px;
+	height: 240px;
+}
+ul#output li a {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	padding: 8px 12px;
+	text-decoration: none;
+	font-size: 11px;
+	color: #FFF;
+	background: #000;
+	-moz-border-radius: 5px;
+}
+ul#output li a:hover {
+	background: #D33431;
+}
+
+/*底部的样式*/
+
+div.kwicks_container {
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+	margin-top: 40px;
+	margin-bottom: 0px;
+	position:absolute;
+	width: 100%;
+	background-color:#E9967A;
+	padding:20px 300px 20px 350px;
+}
+/*-------------------------KWICKS--------------------*/
+.kwicks {
+	list-style: none;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width:600px;
+	height:30px;
+	z-index:2;
+}
+.kwicks li {
+	display: block;
+	float: left;
+	overflow: hidden;
+	padding: 0;
+	cursor: pointer;
+	width: 100px;
+	height: 35px;
+	z-index:2;
+	cursor:pointer;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #7E7E7B;
+}
+.kwicks li a {
+	background-image:url(../images/sprites_menu.png);
+	background-repeat:no-repeat;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Arial;
+	font-size: 14px;
+	letter-spacing: -0.07em;
+	color: #191970;
+	height: 40px;
+	outline:none;
+	display:block;
+	z-index:100;
+	cursor:pointer;
+	text-transform: uppercase;
+	margin-top: -3px;
+	margin-left: 5px;
+	text-decoration: none;
+}
+.kwicks li h3 {
+	position: absolute;
+	width: 120px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Arial;
+	font-size: 10px;
+	color:#8B0000;
+	letter-spacing: -0.02em;
+	outline:none;
+	z-index:0;
+	cursor:pointer;
+	text-transform: uppercase;
+	font-weight: normal;
+	margin-left: 5px;
+	text-decoration: none;
+	left: 0px;
+	top: 15px;
+	right: 0px;
+	bottom: 0px;
+}
+#kwick_1, #kwick_2, #kwick_3, #kwick_4, #kwick_5{
+	margin: 0pt;
+	overflow: hidden;
+	position: absolute;
+	display: block;
+	width: 120px;
+}
+#kwick_1 {
+	left: 0px;
+	border: none;
+}
+#kwick_2 {
+	left: 120px;
+}
+#kwick_3 {
+	left: 240px;
+}
+#kwick_4 {
+	left: 360px;
+}
+#kwick_5 {
+	right: 0px;
+}
+
+#kwick_1 a {
+	background-position:0px 0px;
+}
+.kwicks a:hover, .kwicks #active {
+	color: #3399FF;
+}
+.kwicks li a:hover h3, .kwicks li #active h3 {
+	color: #999999;
+}
+#kwick_2 a {
+	background-position:0px -50px;
+}
+#kwick_3 a {
+	background-position:0px -192px;
+}
+#kwick_4 a {
+	background-position:0px -100px;
+}
+#kwick_5 a {
+	background-position:0px -300px;
+}
+

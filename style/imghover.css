@@ -1,0 +1,13 @@
+﻿.img-hover .hidden {
+	display:none;
+    border:1px solid rgb(117, 92, 92);
+}
+.img-hover .hidden:hover{
+    position:relative;
+}
+.img-hover:hover .hidden{
+    display:block;
+    position:absolute;
+    top:80px;
+    left:120px;
+}
